@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVOCA Research - Analytics</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212; /* Dark background */
+            color: #e0e0e0; /* Light text */
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #1f1f1f; /* Darker header background */
+            color: #e0e0e0;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+        }
+
+        /* Main Content Styling */
+        main {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        main h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #ffffff; /* Bright white for headings */
+        }
+
+        /* Repository List Styling */
+        .repo-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .repo {
+            background: #1f1f1f; /* Dark card background */
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .repo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+        }
+        .repo h2 {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem;
+        }
+        .repo h2 a {
+            color: #4CAF50; /* Neon green links */
+        }
+        .repo h2 a:hover {
+            color: #76ff03; /* Brighter neon green on hover */
+        }
+        .repo p {
+            margin: 0.5rem 0;
+            color: #b0b0b0; /* Softer gray for descriptions */
+        }
+        .repo strong {
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #4CAF50; /* Green highlights */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #1f1f1f; /* Dark footer background */
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 2rem;
+        }
+        footer p {
+            margin: 0.5rem 0;
+        }
+        footer a {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+        footer a:hover {
+            color: #76ff03; /* Neon hover effect */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>MVoca Research</h1>
+        <p>Advancing analytics and AI innovation in research.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Our Featured Repositories</h2>
+        <div class="repo-list">
+            <!-- Repository 1 -->
+            <div class="repo">
+                <h2><a href="https://github.com/mvoca-research/Llama-3.2-11B-Vision-Instruct" target="_blank">Llama 3.2 - Vision Instruct</a></h2>
+                <p>Llama 3.2 11B Vision Instruct model introduces significant advancements in multimodal AI capabilities, allowing for both text and image inputs.</p>
+                <strong>Language: Python</strong>
+            </div>
+
+            <!-- Repository 2 -->
+            <div class="repo">
+                <h2><a href="https://github.com/mvoca-research/inferless-onboarding" target="_blank">GPT-Neo 125M</a></h2>
+                <p>GPT-Neo 125M is a transformer model designed using EleutherAI's replication of the GPT-3 architecture with 125M parameters.</p>
+                <strong>Language: Python</strong>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 MVOCA Research. All Rights Reserved.</p>
+        <p><a href="https://github.com/mvoca-research" target="_blank">Visit our GitHub</a></p>
+    </footer>
+</body>
+</html>
