@@ -13,55 +13,34 @@
             background-color: #121212; /* Dark background */
             color: #e0e0e0; /* Light text */
             line-height: 1.6;
-            overflow-x: hidden;
         }
         a {
             text-decoration: none;
             color: #4CAF50;
-            transition: color 0.3s ease;
         }
         a:hover {
-            color: #76ff03; /* Neon hover effect */
+            text-decoration: underline;
         }
 
         /* Header Styling */
         header {
-            background: linear-gradient(90deg, #1f1f1f, #333);
+            background: linear-gradient(135deg, #1f1f1f, #333333); /* Subtle gradient for header */
             color: #e0e0e0;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
         header h1 {
             margin: 0;
             font-size: 3rem;
-            animation: slide-in 1s ease-out;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #76ff03;
         }
         header p {
             margin: 0.5rem 0 0;
-            font-size: 1.2rem;
-            animation: fade-in 1.5s ease-out;
-        }
-
-        /* Animations for header */
-        @keyframes slide-in {
-            from {
-                transform: translateY(-30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+            font-size: 1.3rem;
+            color: #b0b0b0;
         }
 
         /* Main Content Styling */
@@ -71,63 +50,48 @@
             margin: 0 auto;
         }
         main h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
-            color: #ffffff; /* Bright white for headings */
             text-align: center;
+            color: #ffffff; /* Bright white for headings */
             text-transform: uppercase;
             border-bottom: 2px solid #4CAF50;
             display: inline-block;
+            padding-bottom: 0.5rem;
         }
 
         /* Repository List Styling */
         .repo-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
         }
         .repo {
-            background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
+            background: linear-gradient(145deg, #1a1a1a, #222222); /* Subtle gradient for cards */
             border-radius: 15px;
             padding: 1.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 -1px 2px rgba(255, 255, 255, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
-            position: relative;
-            overflow: hidden;
         }
         .repo:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
-        }
-        .repo:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(76, 175, 80, 0.1);
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-        .repo:hover:before {
-            opacity: 1;
+            transform: scale(1.03); /* Slight scaling on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
         }
         .repo h2 {
-            font-size: 1.7rem;
-            margin: 0 0 0.8rem;
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem;
             color: #76ff03;
         }
         .repo h2 a {
-            color: #4CAF50; /* Neon green links */
+            color: #76ff03; /* Neon green links */
         }
         .repo h2 a:hover {
-            color: #76ff03; /* Brighter neon green on hover */
+            color: #b3ff66; /* Brighter neon green on hover */
         }
         .repo p {
             margin: 0.5rem 0;
             color: #b0b0b0; /* Softer gray for descriptions */
+            line-height: 1.4;
         }
         .repo strong {
             display: inline-block;
@@ -138,21 +102,47 @@
 
         /* Footer Styling */
         footer {
-            background: linear-gradient(90deg, #1f1f1f, #333);
+            background: linear-gradient(135deg, #1f1f1f, #333333); /* Subtle footer gradient */
             color: #e0e0e0;
             text-align: center;
-            padding: 1.5rem 1rem;
-            margin-top: 3rem;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
         }
         footer p {
             margin: 0.5rem 0;
         }
         footer a {
-            color: #4CAF50;
+            color: #76ff03;
             font-weight: bold;
         }
         footer a:hover {
-            color: #76ff03; /* Neon hover effect */
+            color: #b3ff66; /* Neon hover effect */
+        }
+
+        /* Animation */
+        .repo {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .repo:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+        .repo:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+        .repo:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
